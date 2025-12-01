@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Cuenta</title>
+</head>
+<body>
+
+<?php include "header.html"; ?>
+
+<main class="cuenta">
+
+    <section class="perfil">
+
+        <div class="foto-perfil">
+            <img src="img/user.png">
+        </div>
+
+        <form class="datos-personales">
+            <label>NOMBRE:</label>
+            <input type="text">
+
+            <label>APELLIDO:</label>
+            <input type="text">
+
+            <label>FECHA NACIMIENTO:</label>
+            <input type="date">
+
+            <label>DIRECCIÓN:</label>
+            <input type="text">
+        </form>
+    </section>
+
+    <aside class="menu-cuenta">
+        <h2>Mi Cuenta</h2>
+        <ul>
+            <li>Mis Datos</li>
+            <li>Mis direcciones</li>
+            <li>Mis documentos</li>
+            <li>Opiniones</li>
+            <li>Lista de deseados</li>
+        </ul>
+
+        <h2>Pedidos y devoluciones</h2>
+        <ul>
+            <li>Pedidos, devoluciones y facturas</li>
+            <li>Pedidos cancelados</li>
+            <li>Historial de devoluciones</li>
+            <li>Productos digitales</li>
+            <li>Área de seguros</li>
+        </ul>
+
+        <button class="cerrar-sesion">Cerrar sesión</button>
+    </aside>
+
+</main>
+
+<?php include "footer.html"; ?>
+
+</body>
+</html>

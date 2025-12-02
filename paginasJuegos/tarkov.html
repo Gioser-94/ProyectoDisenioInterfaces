@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends - Fatiga Visual</title>
+
+    <!-- Tu CSS global -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- CSS específico de esta pantalla -->
+    <link rel="stylesheet" href="estiloJuegos.css">
+</head>
+<body>
+
+    <!-- HEADER: SOLO logo + iconos -->
+    <header class="header">
+        <span style="font-weight: bold;">Fatiga Visual</span>
+
+        <div class="icons">
+            <span>🛒</span>
+            <span>👤</span>
+        </div>
+    </header>
+
+    <!-- CONTENIDO DEL JUEGO -->
+    <main class="detalle-wrapper">
+
+        <p class="detalle-breadcrumb">
+            <a href="index.html">Inicio</a> &gt;
+            <span>League of Legends</span>
+        </p>
+
+        <!-- PORTADA + INFO -->
+        <section class="detalle-card detalle-top">
+            <div class="detalle-cover">
+                <img src="imagenes/lol-portada.jpg" alt="League of Legends">
+            </div>
+
+            <div class="detalle-info">
+                <h1>League of Legends</h1>
+                <p class="detalle-subtitulo">MOBA • 1-10 jugadores online</p>
+
+                <p><strong>Plataformas:</strong> PC</p>
+                <p><strong>Distribuidora:</strong> Riot Games</p>
+                <p><strong>Lanzamiento:</strong> 2009</p>
+
+                <p class="detalle-precio">34,99 €</p>
+
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </section>
+
+        <!-- VIDEO -->
+        <section class="detalle-card detalle-video">
+            <h2>Tráiler</h2>
+            <video controls>
+                <source src="videos/lol-trailer.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <!-- DESCRIPCIÓN -->
+        <section class="detalle-card detalle-descripcion">
+            <h2>Descripción</h2>
+            <p>League of Legends es un MOBA competitivo...</p>
+        </section>
+
+        <!-- GALERÍA -->
+        <section class="detalle-card detalle-galeria">
+            <h2>Galería</h2>
+            <div class="detalle-galeria-grid">
+                <img src="imagenes/lol-1.jpg" alt="">
+                <img src="imagenes/lol-2.jpg" alt="">
+                <img src="imagenes/lol-3.jpg" alt="">
+                <img src="imagenes/lol-4.jpg" alt="">
+            </div>
+        </section>
+
+        <!-- AUDIOS -->
+        <section class="detalle-card detalle-audios">
+            <h2>Audios del juego</h2>
+
+            <div class="detalle-audio-item">
+                <p><strong>Theme principal</strong></p>
+                <audio controls>
+                    <source src="audios/theme.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="detalle-audio-item">
+                <p><strong>Voz de campeón</strong></p>
+                <audio controls>
+                    <source src="audios/voz.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Fatiga Visual</p>
+        <div class="rrss">
+            <span>📘</span>
+            <span>📸</span>
+            <span>🐦</span>
+        </div>
+    </footer>
+
+</body>
+</html>

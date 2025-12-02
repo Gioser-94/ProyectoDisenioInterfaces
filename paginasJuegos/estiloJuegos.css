@@ -3,12 +3,13 @@ body {
     background-color: #e5e3f1 !important;
 }
 
-header{
+/* Header y footer en morado (mismo que index) */
+header {
     background-color: #3e0a56;
     color: white;
 }
 
-footer{
+footer {
     background-color: #3e0a56;
     color: white;
 }
@@ -26,6 +27,7 @@ footer{
     margin-bottom: 10px;
     color: #3e0a56;
 }
+
 .detalle-breadcrumb a {
     color: #3e0a56;
     text-decoration: none;
@@ -40,16 +42,33 @@ footer{
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
-/* PORTADA + INFO */
+/* ───────────────────────────────────────────── */
+/*   BLOQUE SUPERIOR: IMAGEN + INFO (HORIZONTAL) */
+/* ───────────────────────────────────────────── */
 .detalle-top {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;        /* evita que el texto se vaya abajo */
+    align-items: center;
 }
 
+/* Imagen ocupa 40% del ancho */
+.detalle-cover {
+    flex: 0 0 40%;
+}
+
+/* Imagen ajustada igual para todos */
 .detalle-cover img {
-    width: 260px;
+    width: 100%;
+    height: 100%;
+    max-height: 260px;        /* asegura mismo tamaño visual */
+    object-fit: cover;
     border-radius: 10px;
+}
+
+/* Info ocupa el resto */
+.detalle-info {
+    flex: 1;
 }
 
 .detalle-info h1 {
@@ -82,13 +101,17 @@ footer{
     cursor: pointer;
 }
 
-/* VIDEO */
+/* ─────────────────────── */
+/*     VIDEO DEL JUEGO     */
+/* ─────────────────────── */
 .detalle-video video {
     width: 100%;
     border-radius: 10px;
 }
 
-/* GALERÍA */
+/* ─────────────────────── */
+/*      GALERÍA IMÁGENES   */
+/* ─────────────────────── */
 .detalle-galeria-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -101,7 +124,9 @@ footer{
     border-radius: 10px;
 }
 
-/* AUDIOS */
+/* ─────────────────────── */
+/*     AUDIOS DEL JUEGO    */
+/* ─────────────────────── */
 .detalle-audios {
     display: flex;
     flex-direction: column;
@@ -112,9 +137,21 @@ footer{
     width: 100%;
 }
 
-/* RESPONSIVE */
+/* ─────────────────────── */
+/*         RESPONSIVE      */
+/* ─────────────────────── */
 @media (max-width: 700px) {
     .detalle-top {
-        flex-direction: column;
+        flex-direction: column;      /* móvil: imagen arriba, texto abajo */
+    }
+
+    .detalle-cover {
+        flex: none;
+        width: 100%;
+    }
+
+    .detalle-cover img {
+        max-height: none;
+        height: auto;
     }
 }

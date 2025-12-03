@@ -1,0 +1,103 @@
+/* -----------------------------------------------------
+   RESET / BASE
+----------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5e3f1; /* morado claro como fondo */
+    color: #222;
+}
+
+/* -----------------------------------------------------
+   HEADER
+----------------------------------------------------- */
+.header {
+    background-color: #3e0a56; /* morado oscuro del prototipo */
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 20px;
+}
+
+.btn-menu {
+    background: #d9c4ff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search input {
+    width: 60%;
+    padding: 7px 12px;
+    border-radius: 20px 0 0 20px;
+    border: none;
+}
+
+.search-btn {
+    padding: 7px 12px;
+    border: none;
+    background: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    font-size: 22px;
+}
+
+/* -----------------------------------------------------
+   FOOTER
+----------------------------------------------------- */
+.footer {
+    background-color: #3e0a56;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer .rrss {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+html, body {
+    height: 100%;
+}
+
+/* Contenedor principal en columna */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* El contenido ocupa todo el espacio disponible */
+.main {
+    flex: 1;
+}
+
+/* El footer se va al final */
+.footer {
+    background-color: #3e0a56;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;   /* <-- en vez de 40px */
+}

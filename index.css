@@ -65,7 +65,7 @@ body {
    SECCIÓN BLACK FRIDAY
 ----------------------------------------------------- */
 .black-friday {
-    width: 90%;
+    width: 80%;
     margin: 20px auto;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .bf-slider {
     width: 100%;
-    height: 180px;
+    max-height: 250px;
     border-radius: 15px;
     overflow: hidden;
     position: relative;
@@ -84,8 +84,8 @@ body {
 
 .bf-slider img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
 }
 
 .bf-slider .mas-info {
@@ -102,13 +102,18 @@ body {
    TENDENCIAS
 ----------------------------------------------------- */
 .tendencias {
+    max-width: 1100px; /* igual que el grid */
     width: 90%;
-    margin: 20px auto;
+    margin: 20px auto; /* centrado */
 }
 
 .tendencias h2 {
     font-size: 20px;
+    width: fit-content;   /* la caja se adapta al texto */
+    text-align: left;
+    margin-left: 0;
     margin-bottom: 15px;
+    padding-left: 5px;
 }
 
 .grid-tendencias {
@@ -165,7 +170,7 @@ body {
 .media {
     position: relative;
     width: 100%;
-    height: 130px;
+    aspect-ratio: 16 / 9;
     border-radius: 25px;
     overflow: hidden;
     transition: transform 0.3s ease;

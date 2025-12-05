@@ -1,122 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>League of Legends - Fatiga Visual</title>
 
     <!-- Tu CSS global -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../index.css" />
 
     <!-- CSS específico de esta pantalla -->
-    <link rel="stylesheet" href="estiloJuegos.css">
-    <link rel="icon" type="image/svg+xml" href="../img/Tarkov.svg">
-</head>
-<body>
-
-    <!-- HEADER: SOLO logo + iconos -->
+    <link rel="stylesheet" href="estiloJuegos.css" />
+    <link rel="icon" type="image/svg+xml" href="../img/Tarkov.svg" />
+  </head>
+  <body>
     <header class="header">
-        <span style="font-weight: bold;">Fatiga Visual</span>
-
-        <div class="icons">
-            <span>🛒</span>
-            <span>👤</span>
+      <a href="../index.html">
+        <div class="logo">
+          <img src="../img/logoPrincipal.png" alt="Fatiga Visual" />
         </div>
+      </a>
+      <button class="btn-menu">MENU</button>
+
+      <div class="search">
+        <input type="text" placeholder="Buscar..." />
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <nav class="icons">
+        <a href="../carrito.html">🛒</a>
+        <a href="../login.html">👤</a>
+      </nav>
     </header>
 
     <!-- CONTENIDO DEL JUEGO -->
     <main class="detalle-wrapper">
+      <p class="detalle-breadcrumb">
+        <a href="../index.html">Inicio</a> &gt;
+        <span>Escape From Tarkov</span>
+      </p>
 
-        <p class="detalle-breadcrumb">
-            <a href="index.html">Inicio</a> &gt;
-            <span>League of Legends</span>
+      <!-- PORTADA + INFO -->
+      <section class="detalle-card detalle-top">
+        <div class="detalle-cover">
+          <img src="../img/tarkov.jpg" alt="League of Legends" />
+        </div>
+
+        <div class="detalle-info">
+          <h1>Escape From Tarkov</h1>
+          <p class="detalle-subtitulo">MOBA • 1-10 jugadores online</p>
+
+          <p><strong>Plataformas:</strong> PC</p>
+          <p><strong>Distribuidora:</strong> Riot Games</p>
+          <p><strong>Lanzamiento:</strong> 2009</p>
+
+          <p class="detalle-precio">79.99 €</p>
+
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </section>
+
+      <!-- VIDEO -->
+      <section class="detalle-card detalle-video">
+        <h2>Tráiler</h2>
+        <div class="video-wrapper">
+          <iframe
+            src="https://player.vimeo.com/video/146881078"
+            title="Tráiler del juego"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </section>
+
+      <!-- DESCRIPCIÓN -->
+      <section class="detalle-card detalle-descripcion">
+        <h2>Descripción</h2>
+        <p>
+          Escape from Tarkov es un videojuego táctico de disparos en primera
+          persona (FPS hardcore) desarrollado por Battlestate Games. El juego
+          combina elementos de simulación militar, supervivencia, RPG y loot
+          extraction, creando una experiencia extremadamente realista y
+          exigente. La historia se sitúa en Tarkov, una ciudad ficticia invadida
+          por conflictos militares y facciones enfrentadas. El jugador encarna a
+          un mercenario que debe entrar en zonas de guerra (llamadas raids) para
+          obtener recursos, sobrevivir y finalmente escapar con el botín.
         </p>
+      </section>
 
-        <!-- PORTADA + INFO -->
-        <section class="detalle-card detalle-top">
-            <div class="detalle-cover">
-                <img src="../img/tarkov.jpg" alt="League of Legends">
-            </div>
+      <!-- GALERÍA -->
+      <section class="detalle-card detalle-galeria">
+        <h2>Galería</h2>
+        <div class="detalle-galeria-grid">
+          <img
+            src="https://www.escapefromtarkov.com/uploads/content/media/9153c3aaaef21fa9d8b5a58948bffa3d.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.escapefromtarkov.com/uploads/content/media/746c804275cd072cd7f7790950edb3a7.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.escapefromtarkov.com/uploads/content/media/9f923292bfb0977d54669bd14f1fc184.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.escapefromtarkov.com/uploads/content/media/9153c3aaaef21fa9d8b5a58948bffa3d.jpg"
+            alt=""
+          />
+        </div>
+      </section>
 
-            <div class="detalle-info">
-                <h1>League of Legends</h1>
-                <p class="detalle-subtitulo">MOBA • 1-10 jugadores online</p>
+      <!-- AUDIOS -->
+      <section class="detalle-card detalle-audios">
+        <h2>Audios del juego</h2>
 
-                <p><strong>Plataformas:</strong> PC</p>
-                <p><strong>Distribuidora:</strong> Riot Games</p>
-                <p><strong>Lanzamiento:</strong> 2009</p>
+        <div class="detalle-audio-item">
+          <p><strong>Theme principal</strong></p>
+          <audio controls>
+            <source src="../audio/tarkov/tarkov1.ogg" type="audio/mpeg" />
+          </audio>
+        </div>
 
-                <p class="detalle-precio">79.99 €</p>
-
-                <button class="btn-comprar">Comprar</button>
-            </div>
-        </section>
-
-        <!-- VIDEO -->
-        <section class="detalle-card detalle-video">
-            <h2>Tráiler</h2>
-            <div class="video-wrapper">
-                <iframe 
-                    src="https://player.vimeo.com/video/146881078"
-                    title="Tráiler del juego"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </section>
-
-        <!-- DESCRIPCIÓN -->
-        <section class="detalle-card detalle-descripcion">
-            <h2>Descripción</h2>
-            <p>
-                League of Legends es un juego de estrategia en equipo donde dos escuadras de cinco campeones se enfrentan para destruir el nexo enemigo. Cada campeón posee habilidades únicas y un rol específico dentro del equipo, lo que permite combinar cientos de estilos de juego distintos. La partida se desarrolla en mapas tácticos donde la coordinación, la visión del terreno y las decisiones en tiempo real son claves para la victoria.
-                Con actualizaciones constantes, nuevos campeones, eventos especiales y un ecosistema competitivo de primer nivel, League of Legends ofrece una experiencia dinámica que evoluciona año tras año. Tanto si eres un jugador casual como si buscas competir al máximo nivel, LoL te proporciona un entorno accesible, profundo y repleto de posibilidades estratégicas.
-            </p>
-        </section>
-
-        <!-- GALERÍA -->
-        <section class="detalle-card detalle-galeria">
-            <h2>Galería</h2>
-            <div class="detalle-galeria-grid">
-                <img src="https://www.escapefromtarkov.com/uploads/content/media/9153c3aaaef21fa9d8b5a58948bffa3d.jpg" alt="">
-                <img src="https://www.escapefromtarkov.com/uploads/content/media/746c804275cd072cd7f7790950edb3a7.jpg" alt="">
-                <img src="https://www.escapefromtarkov.com/uploads/content/media/9f923292bfb0977d54669bd14f1fc184.jpg" alt="">
-                <img src="https://www.escapefromtarkov.com/uploads/content/media/9153c3aaaef21fa9d8b5a58948bffa3d.jpg" alt="">
-            </div>
-        </section>
-
-        <!-- AUDIOS -->
-        <section class="detalle-card detalle-audios">
-            <h2>Audios del juego</h2>
-
-            <div class="detalle-audio-item">
-                <p><strong>Theme principal</strong></p>
-                <audio controls>
-                    <source src="../audio/tarkov/tarkov1.ogg" type="audio/mpeg">
-                </audio>
-            </div>
-
-            <div class="detalle-audio-item">
-                <p><strong>Theme secundario</strong></p>
-                <audio controls>
-                    <source src="../audio/tarkov/tarkov2.ogg" type="audio/mpeg">
-                </audio>
-            </div>
-
-        </section>
-
+        <div class="detalle-audio-item">
+          <p><strong>Theme secundario</strong></p>
+          <audio controls>
+            <source src="../audio/tarkov/tarkov2.ogg" type="audio/mpeg" />
+          </audio>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2025 Fatiga Visual</p>
-        <div class="rrss">
-            <span>📘</span>
-            <span>📸</span>
-            <span>🐦</span>
-        </div>
+      <p>© 2025 Fatiga Visual</p>
+      <div class="rrss">
+        <span>📘</span>
+        <span>📸</span>
+        <span>🐦</span>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>

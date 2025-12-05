@@ -108,3 +108,20 @@ body {
     text-align: center;
     margin-top: auto;   /* <-- en vez de 40px */
 }
+
+.logo{
+    max-height: 80px;
+}
+
+/* Animacion curva */
+.logo img{
+    max-height:80px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Aplicamos sombras y pulse cambia opaciodad */
+.logo:hover img {
+    filter: drop-shadow(0 0 8px #00eaff9d) drop-shadow(0 0 12px #ff00ff96);
+    animation: pulse 0.8s infinite alternate;
+}

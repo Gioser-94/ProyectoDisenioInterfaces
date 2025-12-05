@@ -105,36 +105,36 @@ footer {
 /*     VIDEO DEL JUEGO     */
 /* ─────────────────────── */
 .detalle-video video {
-    width: 100%;
-    border-radius: 10px;
+    width: 100%;            /* El video ocupa todo el ancho disponible */
+    border-radius: 10px;    
 }
 
 /* ─────────────────────── */
 /*      GALERÍA IMÁGENES   */
 /* ─────────────────────── */
 .detalle-galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
-    margin-top: 8px;
+    display: grid;                                              /* Usamos grid para las miniaturas */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Columnas flexibles según espacio */
+    gap: 12px;                                                  
+    margin-top: 8px;                                            
 }
 
 .detalle-galeria-grid img {
-    width: 100%;
-    border-radius: 10px;
+    width: 100%;            /* Cada imagen ocupa su columna completa */
+    border-radius: 10px;    /* Bordes redondeados */
 }
 
 /* ─────────────────────── */
 /*     AUDIOS DEL JUEGO    */
 /* ─────────────────────── */
 .detalle-audios {
-    display: flex;
+    display: flex;              /* Colocamos los audios en columna */
     flex-direction: column;
-    gap: 14px;
+    gap: 14px;                  /* Separación entre reproductores */
 }
 
 .detalle-audio-item audio {
-    width: 100%;
+    width: 100%;                /* El reproductor ocupa todo el ancho */
 }
 
 /* ─────────────────────── */
@@ -142,40 +142,40 @@ footer {
 /* ─────────────────────── */
 @media (max-width: 700px) {
     .detalle-top {
-        flex-direction: column;      /* móvil: imagen arriba, texto abajo */
+        flex-direction: column; /* En móviles, los elementos se apilan */
     }
 
     .detalle-cover {
-        flex: none;
-        width: 100%;
+        flex: none;             /* La imagen deja de ocupar espacio flexible */
+        width: 100%;            /* y pasa a ocupar todo el ancho */
     }
 
     .detalle-cover img {
-        max-height: none;
+        max-height: none;       /* Permitimos que la altura se ajuste automáticamente */
         height: auto;
     }
 }
 
 /* Antes tenías esto para <video> */
 .detalle-video video {
-    width: 100%;
-    border-radius: 10px;
+    width: 100%;                /* Ocupa todo el ancho */
+    border-radius: 10px;        /* Bordes redondeados */
 }
 
 /* Ahora añadimos soporte para iframe también */
 .detalle-video .video-wrapper {
-    position: relative;
+    position: relative;         /* Necesario para posicionar el iframe dentro */
     width: 100%;
-    padding-bottom: 56.25%; /* relación 16:9 */
-    border-radius: 10px;
-    overflow: hidden;
+    padding-bottom: 56.25%;     /* Mantiene proporción 16:9 */
+    border-radius: 10px;     
+    overflow: hidden;           /* Recorta lo que sobresalga */
 }
 
 .detalle-video iframe {
-    position: absolute;
+    position: absolute;         /* El iframe se ajusta dentro del wrapper */
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%;                /* Se expande completamente */
     height: 100%;
-    border: 0;
+    border: 0;                  
 }

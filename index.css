@@ -4,7 +4,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Evita que el padding afecte al tamaño total del elemento */
 }
 
 body {
@@ -19,8 +19,8 @@ body {
 .header {
     background-color: #3e0a56; /* morado oscuro del prototipo */
     color: white;
-    display: flex;
-    align-items: center;
+    display: flex;             /* Distribuye los elementos del header en fila */
+    align-items: center;       /* Centra verticalmente */
     padding: 12px 20px;
     gap: 20px;
 }
@@ -35,7 +35,7 @@ body {
 }
 
 .search {
-    flex: 1;
+    flex: 1;                   /* El buscador ocupa todo el espacio sobrante */
     display: flex;
     justify-content: center;
 }
@@ -43,7 +43,7 @@ body {
 .search input {
     width: 60%;
     padding: 7px 12px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 20px; /* Input unido visualmente al botón */
     border: none;
 }
 
@@ -51,12 +51,12 @@ body {
     padding: 7px 12px;
     border: none;
     background: white;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0; /* Complementa la forma del input */
     cursor: pointer;
 }
 
 .icons {
-    display: flex;
+    display: flex;             /* Alinea los iconos horizontalmente */
     gap: 15px;
     font-size: 22px;
 }
@@ -78,8 +78,8 @@ body {
     width: 100%;
     max-height: 250px;
     border-radius: 15px;
-    overflow: hidden;
-    position: relative;
+    overflow: hidden;          /* Recorta las esquinas y evita desbordamiento */
+    position: relative;        /* Permite colocar texto encima de la imagen */
 }
 
 .bf-slider img {
@@ -89,7 +89,7 @@ body {
 }
 
 .bf-slider .mas-info {
-    position: absolute;
+    position: absolute;        /* Texto flotante sobre la imagen */
     right: 20px;
     bottom: 15px;
     color: white;
@@ -109,7 +109,7 @@ body {
 
 .tendencias h2 {
     font-size: 20px;
-    width: fit-content;   /* la caja se adapta al texto */
+    width: fit-content;   /* Se ajusta exactamente al tamaño del texto */
     text-align: left;
     margin-left: 0;
     margin-bottom: 15px;
@@ -118,13 +118,12 @@ body {
 
 .grid-tendencias {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid adaptable al tamaño de pantalla */
     gap: 25px;
     justify-items: center; 
     max-width: 1100px;
     margin: 0 auto;
 }
-
 
 .juego {
     padding: 10px;
@@ -135,29 +134,26 @@ body {
 .juego img {
     width: 100%;
     height: 130px;
-    object-fit: cover;
+    object-fit: cover;         /* Evita deformaciones en la miniatura */
     border-radius: 25px;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Suaviza el efecto hover */
 }
 
 .juego img:hover {
-    transform: scale(1.08);
+    transform: scale(1.08);    /* Zoom estético al pasar el ratón */
     filter: brightness(1.2) contrast(1.1);
 }
-
-
 
 /* Contenedor del texto */
 .juego .info {
     display: flex;
-    justify-content: space-between; /* título izquierda, precio derecha */
+    justify-content: space-between; /* Título izquierda, precio derecha */
     margin-top: 8px;
     padding: 0 5px;
     font-size: 16px;
     font-weight: bold;
 }
 
-/* Estilo opcional si quieres exactamente igual que la imagen */
 .juego .titulo {
     color: #000;
 }
@@ -168,16 +164,16 @@ body {
 
 /* --- CONTENEDOR DEL VIDEO + IMAGEN --- */
 .media {
-    position: relative;
+    position: relative;        /* Permite superponer imagen y video */
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9;      /* Mantiene proporción de video real */
     border-radius: 25px;
-    overflow: hidden;
+    overflow: hidden;          /* Evita que el video o image sobresalgan */
     transition: transform 0.3s ease;
 }
 
 .juego:hover .media {
-    transform: scale(1.06);
+    transform: scale(1.06);    /* Zoom suave en el contenedor */
     transition: transform 0.3s ease;
 }
 
@@ -186,32 +182,30 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity .3s ease, transform .3s ease, filter .3s ease;
+    transition: opacity .3s ease, transform .3s ease, filter .3s ease; /* Fundido al sustituirse por el video */
 }
 
 /* Vídeo invisible por defecto */
 .media .preview {
-    position: absolute;
-    inset: 0;
+    position: absolute;        /* Se coloca exactamente encima de la imagen */
+    inset: 0;                  /* Atajo para top/left/right/bottom: 0 */
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 25px;
-    opacity: 0;
-    transition: opacity .3s ease;
-    pointer-events: none;
+    opacity: 0;                /* Oculto inicialmente */
+    transition: opacity .3s ease; /* Fade-in */
+    pointer-events: none;      /* El video no bloquea el hover */
 }
 
 /* Hover: mostrar el video, ocultar la imagen */
 .juego:hover .preview {
-    opacity: 1;
+    opacity: 1;                /* El video aparece suavemente */
 }
 
 .juego:hover .thumb {
-    opacity: 0;
+    opacity: 0;                /* La miniatura desaparece */
 }
-
-
 
 /* -----------------------------------------------------
    FOOTER
@@ -226,7 +220,7 @@ body {
 
 .footer .rrss {
     margin-top: 10px;
-    display: flex;
+    display: flex;              /* Alinea horizontalmente los iconos */
     justify-content: center;
     gap: 12px;
 }

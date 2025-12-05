@@ -1,122 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rocket League - Fatiga Visual</title>
 
     <!-- Tu CSS global -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../index.css" />
 
     <!-- CSS específico de esta pantalla -->
-    <link rel="stylesheet" href="estiloJuegos.css">
-    <link rel="icon" type="image/svg+xml" href="../img/Rocket.svg">
-</head>
-<body>
+    <link rel="stylesheet" href="estiloJuegos.css" />
+    <link rel="icon" type="image/svg+xml" href="../img/Rocket.svg" />
+  </head>
+  <body>
+  <header class="header">
+    <a href="../index.html">
+      <div class="logo">
+        <img src="../img/logoPrincipal.png" alt="Fatiga Visual" />
+      </div>
+    </a>
+    <button class="btn-menu">MENU</button>
 
-    <!-- HEADER: SOLO logo + iconos -->
-    <header class="header">
-        <span style="font-weight: bold;">Fatiga Visual</span>
+    <div class="search">
+      <input type="text" placeholder="Buscar..." />
+      <button class="search-btn">🔍</button>
+    </div>
 
-        <div class="icons">
-            <span>🛒</span>
-            <span>👤</span>
-        </div>
-    </header>
+    <nav class="icons">
+      <a href="../carrito.html">🛒</a>
+      <a href="../login.html">👤</a>
+    </nav>
+  </header>
 
     <!-- CONTENIDO DEL JUEGO -->
     <main class="detalle-wrapper">
+      <p class="detalle-breadcrumb">
+        <a href="../index.html">Inicio</a> &gt;
+        <span>Rocket League</span>
+      </p>
 
-        <p class="detalle-breadcrumb">
-            <a href="index.html">Inicio</a> &gt;
-            <span>League of Legends</span>
+      <!-- PORTADA + INFO -->
+      <section class="detalle-card detalle-top">
+        <div class="detalle-cover">
+          <img
+            src="../img/Rocket-League-feature.webp"
+            alt="League of Legends"
+          />
+        </div>
+
+        <div class="detalle-info">
+          <h1>Rocket League</h1>
+          <p class="detalle-subtitulo">
+            Acción deportiva • 1-8 jugadores online
+          </p>
+
+          <p><strong>Plataformas:</strong> Multiplataforma</p>
+          <p><strong>Distribuidora:</strong> Psyonix | Epic games</p>
+          <p><strong>Lanzamiento:</strong> 2015</p>
+
+          <p class="detalle-precio">34,99 €</p>
+
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </section>
+
+      <!-- VIDEO -->
+      <section class="detalle-card detalle-video">
+        <h2>Tráiler</h2>
+        <div class="video-wrapper">
+          <iframe
+            src="https://medal.tv/clip/lCt67P4ru_QJaAZUz/embed"
+            title="Tráiler del juego"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </section>
+
+      <!-- DESCRIPCIÓN -->
+      <section class="detalle-card detalle-descripcion">
+        <h2>Descripción</h2>
+        <p>
+          Rocket League es un videojuego competitivo que combina fútbol con
+          coches propulsados por cohetes. Fue desarrollado por Psyonix y lanzado
+          en 2015. Su concepto es sencillo pero altamente adictivo: dos equipos,
+          formados por coches acrobáticos, compiten por golpear una enorme
+          pelota y marcar goles en la portería rival. El jugador controla un
+          coche que puede saltar, realizar piruetas, acelerar con turbo,
+          conducir por paredes e incluso volar durante unos segundos usando el
+          impulso aéreo. Esta combinación de física, velocidad y habilidad hace
+          que cada partido sea dinámico, espectacular y muy técnico.
         </p>
+      </section>
 
-        <!-- PORTADA + INFO -->
-        <section class="detalle-card detalle-top">
-            <div class="detalle-cover">
-                <img src="../img/Rocket-League-feature.webp" alt="League of Legends">
-            </div>
+      <!-- GALERÍA -->
+      <section class="detalle-card detalle-galeria">
+        <h2>Galería</h2>
+        <div class="detalle-galeria-grid">
+          <img
+            src="https://imgs.search.brave.com/jv_1DaQVIpMq3QkA_wK--r_i0vF9A_-8OiVbZ5Yublc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDE4NTQz/NjQuanBn"
+            alt=""
+          />
+          <img
+            src="https://imgs.search.brave.com/v_d0fnPYjCFtMRXRD-QXFdV6vXGZsouMua7GMGzSbzc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDE4NTQz/NjIuanBn"
+            alt=""
+          />
+          <img
+            src="https://imgs.search.brave.com/X_tFUaBn-9vbJjCETlrvIaxXinNJte8MD59hWx8trmg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nYW1p/bmctY2RuLmNvbS9p/bWFnZXMvbmV3cy9h/cnRpY2xlcy8xMTU0/MS9jb3Zlci8xMDAw/eDU2My9tb3J0YWwt/a29tYmF0LXlhLWhh/LWxsZWdhZG8tYS1y/b2NrZXQtbGVhZ3Vl/LWNvdmVyNjdlNTU4/YWJlOWM3OS5qcGc"
+            alt=""
+          />
+          <img
+            src="https://imgs.search.brave.com/IehVMPRS5JVpWamBdMnZnLC98Z1EY-O6Hf24_ztM5z0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDE4NTQz/MDAuanBn"
+            alt=""
+          />
+        </div>
+      </section>
 
-            <div class="detalle-info">
-                <h1>Rocket League</h1>
-                <p class="detalle-subtitulo">Acción deportiva • 1-8 jugadores online</p>
+      <!-- AUDIOS -->
+      <section class="detalle-card detalle-audios">
+        <h2>Audios del juego</h2>
 
-                <p><strong>Plataformas:</strong> Multiplataforma </p>
-                <p><strong>Distribuidora:</strong> Psyonix | Epic games </p>
-                <p><strong>Lanzamiento:</strong> 2015</p>
+        <div class="detalle-audio-item">
+          <p><strong>Theme principal</strong></p>
+          <audio controls>
+            <source src="../audio/rocket/rocket1.flac" type="audio/mpeg" />
+          </audio>
+        </div>
 
-                <p class="detalle-precio">34,99 €</p>
-
-                <button class="btn-comprar">Comprar</button>
-            </div>
-        </section>
-
-        <!-- VIDEO -->
-        <section class="detalle-card detalle-video">
-            <h2>Tráiler</h2>
-            <div class="video-wrapper">
-                <iframe 
-                    src="https://medal.tv/clip/lCt67P4ru_QJaAZUz/embed"
-                    title="Tráiler del juego"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </section>
-
-        <!-- DESCRIPCIÓN -->
-        <section class="detalle-card detalle-descripcion">
-            <h2>Descripción</h2>
-            <p>
-                League of Legends es un juego de estrategia en equipo donde dos escuadras de cinco campeones se enfrentan para destruir el nexo enemigo. Cada campeón posee habilidades únicas y un rol específico dentro del equipo, lo que permite combinar cientos de estilos de juego distintos. La partida se desarrolla en mapas tácticos donde la coordinación, la visión del terreno y las decisiones en tiempo real son claves para la victoria.
-                Con actualizaciones constantes, nuevos campeones, eventos especiales y un ecosistema competitivo de primer nivel, League of Legends ofrece una experiencia dinámica que evoluciona año tras año. Tanto si eres un jugador casual como si buscas competir al máximo nivel, LoL te proporciona un entorno accesible, profundo y repleto de posibilidades estratégicas.
-            </p>
-        </section>
-
-        <!-- GALERÍA -->
-        <section class="detalle-card detalle-galeria">
-            <h2>Galería</h2>
-            <div class="detalle-galeria-grid">
-                <img src="https://imgs.search.brave.com/jv_1DaQVIpMq3QkA_wK--r_i0vF9A_-8OiVbZ5Yublc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDE4NTQz/NjQuanBn" alt="">
-                <img src="https://imgs.search.brave.com/v_d0fnPYjCFtMRXRD-QXFdV6vXGZsouMua7GMGzSbzc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDE4NTQz/NjIuanBn" alt="">
-                <img src="https://imgs.search.brave.com/X_tFUaBn-9vbJjCETlrvIaxXinNJte8MD59hWx8trmg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nYW1p/bmctY2RuLmNvbS9p/bWFnZXMvbmV3cy9h/cnRpY2xlcy8xMTU0/MS9jb3Zlci8xMDAw/eDU2My9tb3J0YWwt/a29tYmF0LXlhLWhh/LWxsZWdhZG8tYS1y/b2NrZXQtbGVhZ3Vl/LWNvdmVyNjdlNTU4/YWJlOWM3OS5qcGc" alt="">
-                <img src="https://imgs.search.brave.com/IehVMPRS5JVpWamBdMnZnLC98Z1EY-O6Hf24_ztM5z0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDE4NTQz/MDAuanBn" alt="">
-            </div>
-        </section>
-
-        <!-- AUDIOS -->
-        <section class="detalle-card detalle-audios">
-            <h2>Audios del juego</h2>
-
-            <div class="detalle-audio-item">
-                <p><strong>Theme principal</strong></p>
-                <audio controls>
-                    <source src="../audio/rocket/rocket1.flac" type="audio/mpeg">
-                </audio>
-            </div>
-
-            <div class="detalle-audio-item">
-                <p><strong>Theme secundario</strong></p>
-                <audio controls>
-                    <source src="../audio/rocket/rocket2.flac" type="audio/mpeg">
-                </audio>
-            </div>
-
-        </section>
-
+        <div class="detalle-audio-item">
+          <p><strong>Theme secundario</strong></p>
+          <audio controls>
+            <source src="../audio/rocket/rocket2.flac" type="audio/mpeg" />
+          </audio>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2025 Fatiga Visual</p>
-        <div class="rrss">
-            <span>📘</span>
-            <span>📸</span>
-            <span>🐦</span>
-        </div>
+      <p>© 2025 Fatiga Visual</p>
+      <div class="rrss">
+        <span>📘</span>
+        <span>📸</span>
+        <span>🐦</span>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>

@@ -6,7 +6,7 @@
     <title>Zelda: Breath of the Wild - Fatiga Visual</title>
 
     <!-- Tu CSS global -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../index.css">
 
     <!-- CSS específico de esta pantalla -->
     <link rel="stylesheet" href="estiloJuegos.css">
@@ -14,21 +14,30 @@
 </head>
 <body>
 
-    <!-- HEADER: SOLO logo + iconos -->
-    <header class="header">
-        <span style="font-weight: bold;">Fatiga Visual</span>
+  <header class="header">
+    <a href="../index.html">
+      <div class="logo">
+        <img src="../img/logoPrincipal.png" alt="Fatiga Visual" />
+      </div>
+    </a>
+    <button class="btn-menu">MENU</button>
 
-        <div class="icons">
-            <span>🛒</span>
-            <span>👤</span>
-        </div>
-    </header>
+    <div class="search">
+      <input type="text" placeholder="Buscar..." />
+      <button class="search-btn">🔍</button>
+    </div>
+
+    <nav class="icons">
+      <a href="../carrito.html">🛒</a>
+      <a href="../login.html">👤</a>
+    </nav>
+  </header>
 
     <!-- CONTENIDO DEL JUEGO -->
     <main class="detalle-wrapper">
 
         <p class="detalle-breadcrumb">
-            <a href="index.html">Inicio</a> &gt;
+            <a href="../index.html">Inicio</a> &gt;
             <span>Zelda: Breath of the Wild</span>
         </p>
 

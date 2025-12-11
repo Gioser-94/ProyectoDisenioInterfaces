@@ -89,7 +89,7 @@ body {
 }
 
 /* -----------------------------------------------------
-   SECCIÓN BLACK FRIDAY (CSS limpio desde 0)
+   SECCIÓN BANNER
 ----------------------------------------------------- */
 
 .black-friday {
@@ -106,24 +106,26 @@ body {
 
 /* Contenedor del banner */
 .bf-slider {
+    display: flex;
     width: 100%;
     max-width: 1500px;
     border-radius: 25px;
     overflow: hidden;
     position: relative;
+    transition: transform .3s ease;
+}
+
+.bf-slider:hover {
+    transform: scale(1.02);
 }
 
 /* Imagen del banner */
 .bf-slider img {
     width: 100%;      /* se adapta al ancho */
-    height: 100%;
+    height: auto;
     object-fit: cover;
-}
+    margin-bottom: 0px;
 
-/* Efecto suave al pasar el ratón */
-.bf-slider:hover img {
-    transform: scale(1.02);
-    transition: transform .3s ease;
 }
 
 

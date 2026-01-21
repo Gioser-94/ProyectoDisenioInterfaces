@@ -2,8 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Iniciar Sesión</title>
+    <title>Iniciar Sesión o Registro</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="login.js"></script>
 </head>
 <body>
     <header class="header">
@@ -26,38 +29,67 @@
         </nav>
     </header>
 
-<main class="login">
+    <main>
+        <div class="container">
+            <!-- Formulario Login -->
+            <div class="form-box login">
+                <form action="">
+                    <h1>Login</h1>
+                    <div class="input-box">
+                        <input type="text" placeholder="Nombre de usuario" required>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Contraseña" required>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="recuperar-pass">
+                        <a href="#">¿Has olvidado la contraseña?</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+            
+            <!-- Formulario Registro -->
+            <div class="form-box registro">
+                <form action="">
+                    <h1>Registro</h1>
+                    <div class="input-box">
+                        <input type="text" placeholder="Nombre de usuario" required>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Contraseña" required>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" placeholder="ejemplo@email.com" required>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <button type="submit" class="btn">Registro</button>
+                </form>
+            </div>
+            
+            <!-- Alternar box -->
+            <div class="alternar-box">
+                <!-- Alternar box Left -->
+                <div class="alternar-panel alternar-left">
+                    <h1>¡Bienvenido!</h1>
+                    <p>¿No tienes una cuenta?</p>
+                    <button class="btn registro-btn">Registro</button>
+                </div>
 
-    <section class="login-container">
-
-        <h2>Iniciar sesión con</h2>
-
-        <div class="login-icons">
-            <img src="img/google.png">
-            <img src="img/apple.png">
-            <img src="img/xbox.png">
-            <img src="img/meta.png">
+                <!-- Alternar box right -->
+                <div class="alternar-panel alternar-right">
+                    <h1>¡Bienvenido de nuevo!</h1>
+                    <p>¿Ya tienes una cuenta?</p>
+                    <button class="btn login-btn">Login</button>
+                </div>
+            </div>
         </div>
+    </main>
 
-        <form>
-            <label>Email:</label>
-            <input type="email">
 
-            <label>Contraseña:</label>
-            <input type="password">
-
-            <button class="btn-login">Entrar</button>
-
-            <a href="#">Registrarse</a> · <a href="#">Olvidé la contraseña</a>
-        </form>
-
-    </section>
-
-    <div class="login-imagen">
-        <img src="img/fatiga-visual.jpg">
-    </div>
-
-</main>
     <footer class="footer">
     <p>© 2025 Fatiga Visual</p>
         <div class="rrss">

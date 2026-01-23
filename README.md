@@ -13,7 +13,7 @@ _**FORMULARIOS**_
   CAMPOS OBLIGATORIOS, IMPLEMENTAR (hover, focus, valid, invalid,…)
 
 _**TRANSICIONES**_
-• Posicionamiento, ✅ (user.css [.panel con transform: translateY])
+• Posicionamiento, ✅ (user.css [.panel con transform: translateY])  (login.css [movimiento con left y right])
 • Redimensionar, ✅ (user.css [.panel con max-height])
 • Cambios de fuente o color de fondo, ❌
 • Rotaciones, etc... ❌

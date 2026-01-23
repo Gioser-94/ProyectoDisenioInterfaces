@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Usuario</title>
+  <link rel="stylesheet" href="user.css">
+  <script src="user.js" defer></script>
+</head>
+<body>
+
+<main class="user-page">
+  <div class="container" id="userContainer">
+
+    <!-- PANTALLA: INFO -->
+    <section class="panel info">
+      <div class="topbar">
+        <h1>Información personal</h1>
+        <button class="btn toEditBtn" type="button">Añadir / Editar</button>
+      </div>
+
+        <div class="linea-animada">
+            <div class="animada"></div>
+        </div>
+
+      <div class="card">
+        <div class="row"><span>Edad:</span> <span id="viewEdad">—</span></div>
+        <div class="row"><span>Satisfacción:</span> <span id="viewSatisfaccion">—</span></div>
+        <div class="row"><span>Fecha:</span> <span id="viewFecha">—</span></div>
+        <div class="row"><span>Teléfono:</span> <span id="viewTelefono">—</span></div>
+        <div class="row"><span>Género:</span> <span id="viewGenero">—</span></div>
+        <div class="row"><span>Cómo nos conociste:</span> <span id="viewConociste">—</span></div>
+        <div class="row"><span>Lo que más te gusta:</span> <span id="viewGusta">—</span></div>
+        <div class="row"><span>Descripción:</span> <span id="viewDescripcion">—</span></div>
+      </div>
+    </section>
+
+    <!-- PANTALLA: EDIT/ADD -->
+    <section class="panel edit">
+      <div class="topbar">
+        <h1>Añadir información</h1>
+        <button class="btn toInfoBtn" type="button">Volver</button>
+      </div>
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
+      <form id="editForm" class="card" novalidate>
+        <!-- Número -->
+        <label class="field">Edad (18 a 99)
+          <input id="inputEdad" type="number" min="18" max="99" placeholder="Edad" required>
+          <small class="hint">Mínimo 18, máximo 99.</small>
+        </label>
+
+        <!-- Range -->
+        <label class="field">Satisfacción con la página: <b id="labelSatisfaccion">5</b>/10
+          <input id="inputSatisfaccion" type="range" min="0" max="10" step="1" value="5">
+          <small class="hint">0 (nada) a 10 (mucho).</small>
+        </label>
+
+        <!-- Fecha -->
+        <label class="field">Fecha (mín. 1900-01-01, máx. hoy)
+          <input id="inputFecha" type="date" min="1900-01-01" required>
+          <small class="hint">No se permite una fecha futura.</small>
+        </label>
+
+        <!-- Teléfono -->
+        <label class="field">Teléfono (9 dígitos)
+          <input id="inputTelefono" type="tel" pattern="[0-9]{9}" placeholder="Ej: 612345678" required>
+          <small class="hint">Formato: 9 números.</small>
+        </label>
+
+        <!-- select -->
+        <label class="field">Género
+          <select id="inputGenero" required>
+            <option value="">Selecciona una opción</option>
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+          </select>
+        </label>
+
+        <!-- checkbox -->
+        <fieldset class="fieldset">
+          <legend>¿Cómo nos conociste? (puedes marcar varias)</legend>
+          <label class="check"><input type="checkbox" name="conociste" value="Instagram"> Instagram</label>
+          <label class="check"><input type="checkbox" name="conociste" value="Google"> Google</label>
+          <label class="check"><input type="checkbox" name="conociste" value="Amigos"> Amigos</label>
+          <label class="check"><input type="checkbox" name="conociste" value="Publicidad"> Publicidad</label>
+        </fieldset>
+
+        <!-- radio -->
+        <fieldset class="fieldset">
+          <legend>Lo que más te gusta de la página (elige 1)</legend>
+          <label class="check"><input type="radio" name="gusta" value="Diseño" required> Diseño</label>
+          <label class="check"><input type="radio" name="gusta" value="Contenido"> Contenido</label>
+          <label class="check"><input type="radio" name="gusta" value="Velocidad"> Velocidad</label>
+          <label class="check"><input type="radio" name="gusta" value="Productos"> Productos</label>
+        </fieldset>
+
+        <!-- textarea -->
+        <label class="field">Descripción tuya (máx. 200)
+          <textarea id="inputDescripcion" maxlength="200" placeholder="Cuéntanos algo sobre ti..."></textarea>
+          <div class="counter"><span id="descCount">0</span>/200</div>
+        </label>
+
+        <button class="btnPrimary" type="submit">Guardar</button>
+      </form>
+    </section>
+
+  </div>
+
+</main>
+
+</body>
+</html>

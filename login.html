@@ -5,8 +5,9 @@
     <title>Iniciar Sesión o Registro</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="error.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <script src="login.js"></script>
+    <script src="login.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -33,14 +34,14 @@
         <div class="container">
             <!-- Formulario Login -->
             <div class="form-box login">
-                <form action="">
+                <form action="" id="loginForm">
                     <h1>Login</h1>
                     <div class="input-box">
-                        <input type="text" placeholder="Nombre de usuario" required>
+                        <input type="text" placeholder="Nombre de usuario" id="nombre_usuario_login" required>
                         <i class="fa-solid fa-user"></i>
                     </div>
                     <div class="input-box">
-                        <input type="password" placeholder="Contraseña" required>
+                        <input type="password" placeholder="Contraseña" id="password_login" required>
                         <i class="fa-solid fa-lock"></i>
                     </div>
                     <div class="recuperar-pass">
@@ -51,19 +52,19 @@
             </div>
             
             <!-- Formulario Registro -->
-            <div class="form-box registro">
+            <div class="form-box registro" id="registroForm">
                 <form action="">
                     <h1>Registro</h1>
                     <div class="input-box">
-                        <input type="text" placeholder="Nombre de usuario" required>
+                        <input type="text" placeholder="Nombre de usuario" id="nombre_usuario_registro" required>
                         <i class="fa-solid fa-user"></i>
                     </div>
                     <div class="input-box">
-                        <input type="password" placeholder="Contraseña" required>
+                        <input type="password" placeholder="Contraseña" id="password_registro" required>
                         <i class="fa-solid fa-lock"></i>
                     </div>
                     <div class="input-box">
-                        <input type="email" placeholder="ejemplo@email.com" required>
+                        <input type="email" placeholder="ejemplo@email.com" id="email" required>
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <button type="submit" class="btn">Registro</button>

@@ -1,0 +1,17 @@
+/* -----------------------------------------------------
+   FOOTER
+----------------------------------------------------- */
+.footer {
+    background-color: #3e0a56;
+    color: white;
+    padding: 20px;
+    text-align: center; /* texto al centro */
+    margin-top: auto;
+}
+
+.footer .rrss {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* contenido al centro */
+    gap: 12px;
+}

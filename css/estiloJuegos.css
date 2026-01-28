@@ -1,17 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Asegurar fondo lila como el index */
 body {
-    background-color: #e5e3f1 !important;
-}
-
-/* Header y footer en morado (mismo que index) */
-header {
-    background-color: #3e0a56;
-    color: white;
-}
-
-footer {
-    background-color: #3e0a56;
-    color: white;
+    font-family: Arial, sans-serif;
+    background-color: #e5e3f1; /* morado claro como fondo */
+    color: #222;
 }
 
 /* Contenido principal del detalle */

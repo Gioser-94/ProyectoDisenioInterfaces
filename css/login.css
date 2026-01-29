@@ -202,3 +202,29 @@ form {
     border: 2px solid #fff;
     box-shadow: none;
 }
+
+/* ROTACIÓN + TRANSICIÓN: botones de login/registro */
+.form-box.login .btn,
+.form-box.registro .btn,
+.alternar-panel .registro-btn,
+.alternar-panel .login-btn{
+  transition: transform 250ms ease, box-shadow 250ms ease, filter 250ms ease;
+  transform-origin: center;
+}
+
+.form-box.login .btn:hover,
+.form-box.registro .btn:hover,
+.alternar-panel .registro-btn:hover,
+.alternar-panel .login-btn:hover{
+  transform: rotate(-3deg) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,.18);
+  filter: brightness(1.05);
+}
+
+/* opcional: al hacer click */
+.form-box.login .btn:active,
+.form-box.registro .btn:active,
+.alternar-panel .registro-btn:active,
+.alternar-panel .login-btn:active{
+  transform: rotate(-1deg) scale(0.98);
+}

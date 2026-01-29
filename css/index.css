@@ -179,3 +179,68 @@ main {
 .juego:hover .thumb {
     opacity: 0;
 }
+
+/* 
+   TRANSICIONES: fuente/color/fondo + rotaciones
+   =========================== */
+
+
+.black-friday h2, .tendencias h2, .breadcrumb {
+  font-family: "Poppins", Arial, sans-serif; 
+  font-weight: 600;
+  transition: color 250ms ease, letter-spacing 250ms ease, transform 250ms ease;
+  display: inline-block; 
+}
+
+.black-friday h2:hover, .tendencias h2:hover, .breadcrumb:hover {
+  color: #3e0a56;
+  letter-spacing: 1px;
+  transform: rotate(-1deg) scale(1.06);
+}
+
+/* 2) Inputs: cambio de fondo y sombra al focus */
+.search input {
+  transition: background-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+}
+
+.search input:focus {
+  outline: none;
+  background-color: #ffffff;
+  transform: scale(1.02);
+  box-shadow: 0 0 0 4px rgba(217,196,255,.65);
+}
+
+/*
+   TYPEWRITER
+   ========== */
+
+.typewriter{
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  padding-right: 4px;
+  border-right: 3px solid currentColor;
+  animation:
+    escribir 2.5s steps(30, end) forwards,
+    cursor 0.8s steps(1) infinite,
+    quitarCursor 0.01s linear forwards;
+  animation-delay:
+    0s,
+    0s,
+    2.5s;
+}
+
+@keyframes escribir{
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+@keyframes cursor{
+  50% { border-right-color: transparent; }
+}
+
+@keyframes quitarCursor{
+  to { border-right: none; }
+}
+

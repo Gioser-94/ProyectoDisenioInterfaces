@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
+/* Reset básico y modelo de caja consistente */
 * {
     text-decoration: none;
     list-style: none;
@@ -10,15 +10,18 @@
     box-sizing: border-box;
 }
 
+/* Altura completa para layout flexible */
 html, body {
     height: 100%;
 }
 
+/* Estructura vertical: header / main / footer */
 body {
     display: flex;
     flex-direction: column;
 }
 
+/* Main centrado y flexible entre header y footer */
 main {
     font-family: "poppins", sans-serif;
     display: flex;
@@ -29,6 +32,7 @@ main {
     background: linear-gradient(90deg, #e5e3f1, #3e0a56af);
 }
 
+/* Contenedor principal del login/registro */
 .container {
     position: relative;
     width: 100%;
@@ -36,7 +40,7 @@ main {
     max-width: 850px;
     background: #fff;
     margin: 0 auto;
-    margin-top: clamp(80px, 12vh, 200px);
+    margin-top: clamp(80px, 12vh, 200px);  /* Ajuste vertical responsive */
     border-radius: 30px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -52,10 +56,12 @@ main {
     margin: 15px 0;
 }
 
+/* Formularios ocupan todo el ancho disponible */
 form {
     width: 100%;
 }
 
+/* Caja base de login y registro */
 .form-box {
     position: absolute;
     right: 0;
@@ -71,23 +77,28 @@ form {
     transition: 0.6s ease-in-out 1.2s, visibility 0s 1s;
 }
 
+/* Desplazamiento del formulario al alternar */
 .container.active .form-box{
     right: 50%;
 }
 
+/* Registro oculto por defecto */
 .form-box.registro {
     visibility: hidden;
 }
 
+/* Mostrar registro al activar */
 .container.active .form-box.registro {
     visibility: visible;
 }
 
+/* Contenedor de cada input con icono */
 .input-box {
     position: relative;
     margin: 30px 0;
 }
 
+/* Inputs base */
 .input-box input {
     width: 100%;
     padding: 13px 50px 13px 20px;
@@ -100,11 +111,13 @@ form {
     font-weight: 500;
 }
 
+/* Placeholder más suave */
 .input-box input::placeholder {
     color: #888;
     font-weight: 400;
 }
 
+/* Iconos posicionados dentro del input */
 .input-box i {
     position: absolute;
     right: 20px;
@@ -113,6 +126,7 @@ form {
     font-size: 20px;
 }
 
+/* Enlace de recuperar contraseña */
 .recuperar-pass {
     margin: -15px 0 15px;
 }
@@ -122,6 +136,7 @@ form {
     color: #333;
 }
 
+/* Botón principal */
 .btn {
     width: 100%;
     height: 48px;
@@ -136,12 +151,14 @@ form {
     font-weight: 600;
 }
 
+/* Contenedor del panel de alternancia */
 .alternar-box {
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
+/* Fondo animado curvo */
 .alternar-box::before {
     content: '';
     position: absolute;
@@ -154,10 +171,12 @@ form {
     transition: 1.8s ease-in-out;
 }
 
+/* Movimiento del fondo al alternar */
 .container.active .alternar-box::before {
     left: 50%;
 }
 
+/* Paneles de texto laterales */
 .alternar-panel {
     position: absolute;
     width: 50%;
@@ -171,21 +190,25 @@ form {
     transition: 0.6s ease-in-out;
 }
 
+/* Panel izquierdo */
 .alternar-panel.alternar-left {
     left: 0;
     transition-delay: 1.2s;
 }
 
+/* Ocultar panel izquierdo */
 .container.active .alternar-panel.alternar-left {
     left: -50%;
     transition-delay: 0.6s;
 }
 
+/* Panel derecho */
 .alternar-panel.alternar-right {
     right: -50%;
     transition-delay: 0.6s;
 }
 
+/* Mostrar panel derecho */
 .container.active .alternar-panel.alternar-right {
     right: 0;
     transition-delay: 1.2s;
@@ -195,6 +218,7 @@ form {
     margin-bottom: 20px;
 }
 
+/* Botones transparentes en paneles */
 .alternar-panel .btn {
     width: 160px;
     height: 46px;

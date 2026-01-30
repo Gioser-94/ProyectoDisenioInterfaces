@@ -198,18 +198,6 @@ main {
   transform: rotate(-1deg) scale(1.06);
 }
 
-/* 2) Inputs: cambio de fondo y sombra al focus */
-.search input {
-  transition: background-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
-}
-
-.search input:focus {
-  outline: none;
-  background-color: #ffffff;
-  transform: scale(1.02);
-  box-shadow: 0 0 0 4px rgba(217,196,255,.65);
-}
-
 /*
    TYPEWRITER
    ========== */
